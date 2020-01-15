@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище ClinicModelContainer" CdmEntityContainer="ClinicEntities1">
+    <EntitySetMapping Name="CabinetProcedures">
+      <EntityTypeMapping TypeName="ClinicModel.CabinetProcedures">
+        <MappingFragment StoreEntitySet="CabinetProcedures">
+          <ScalarProperty Name="Cabinet_ID" ColumnName="Cabinet_ID" />
+          <ScalarProperty Name="ProcedureType_ID" ColumnName="ProcedureType_ID" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cabinets">
+      <EntityTypeMapping TypeName="ClinicModel.Cabinets">
+        <MappingFragment StoreEntitySet="Cabinets">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Diagnosises">
+      <EntityTypeMapping TypeName="ClinicModel.Diagnosises">
+        <MappingFragment StoreEntitySet="Diagnosises">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Patient_ID" ColumnName="Patient_ID" />
+          <ScalarProperty Name="Worker_ID" ColumnName="Worker_ID" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DiagnosisesProcedures">
+      <EntityTypeMapping TypeName="ClinicModel.DiagnosisesProcedures">
+        <MappingFragment StoreEntitySet="DiagnosisesProcedures">
+          <ScalarProperty Name="Diagnosis_ID" ColumnName="Diagnosis_ID" />
+          <ScalarProperty Name="Procedure_ID" ColumnName="Procedure_ID" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FilesProcedures">
+      <EntityTypeMapping TypeName="ClinicModel.FilesProcedures">
+        <MappingFragment StoreEntitySet="FilesProcedures">
+          <ScalarProperty Name="Procedure_ID" ColumnName="Procedure_ID" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KindOfProcedures">
+      <EntityTypeMapping TypeName="ClinicModel.KindOfProcedures">
+        <MappingFragment StoreEntitySet="KindOfProcedures">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TypeOfProcedure_ID" ColumnName="TypeOfProcedure_ID" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Patients">
+      <EntityTypeMapping TypeName="ClinicModel.Patients">
+        <MappingFragment StoreEntitySet="Patients">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="TelephoneNumber" ColumnName="TelephoneNumber" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pays">
+      <EntityTypeMapping TypeName="ClinicModel.Pays">
+        <MappingFragment StoreEntitySet="Pays">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Patient_ID" ColumnName="Patient_ID" />
+          <ScalarProperty Name="Procedure_ID" ColumnName="Procedure_ID" />
+          <ScalarProperty Name="Worker_ID" ColumnName="Worker_ID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Procedures">
+      <EntityTypeMapping TypeName="ClinicModel.Procedures">
+        <MappingFragment StoreEntitySet="Procedures">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DateFact" ColumnName="DateFact" />
+          <ScalarProperty Name="DateEventStart" ColumnName="DateEventStart" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="KindOfProcedure_ID" ColumnName="KindOfProcedure_ID" />
+          <ScalarProperty Name="TypeOfProcedure_ID" ColumnName="TypeOfProcedure_ID" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+          <ScalarProperty Name="Patient_ID" ColumnName="Patient_ID" />
+          <ScalarProperty Name="Worker_ID" ColumnName="Worker_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Cabinet_ID" ColumnName="Cabinet_ID" />
+          <ScalarProperty Name="IsOurs" ColumnName="IsOurs" />
+          <ScalarProperty Name="DateEventEnd" ColumnName="DateEventEnd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TreatmentPlanDagnosises">
+      <EntityTypeMapping TypeName="ClinicModel.TreatmentPlanDagnosises">
+        <MappingFragment StoreEntitySet="TreatmentPlanDagnosises">
+          <ScalarProperty Name="TreatmentPlan_ID" ColumnName="TreatmentPlan_ID" />
+          <ScalarProperty Name="Diagnosis_ID" ColumnName="Diagnosis_ID" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TreatmentPlanProcedures">
+      <EntityTypeMapping TypeName="ClinicModel.TreatmentPlanProcedures">
+        <MappingFragment StoreEntitySet="TreatmentPlanProcedures">
+          <ScalarProperty Name="TreatmentPlan_ID" ColumnName="TreatmentPlan_ID" />
+          <ScalarProperty Name="Procedure_ID" ColumnName="Procedure_ID" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TreatmentPlans">
+      <EntityTypeMapping TypeName="ClinicModel.TreatmentPlans">
+        <MappingFragment StoreEntitySet="TreatmentPlans">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Patient_ID" ColumnName="Patient_ID" />
+          <ScalarProperty Name="Worker_ID" ColumnName="Worker_ID" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeOfProcedures">
+      <EntityTypeMapping TypeName="ClinicModel.TypeOfProcedures">
+        <MappingFragment StoreEntitySet="TypeOfProcedures">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="KindOfProcedure_ID" ColumnName="KindOfProcedure_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VisitProcedures">
+      <EntityTypeMapping TypeName="ClinicModel.VisitProcedures">
+        <MappingFragment StoreEntitySet="VisitProcedures">
+          <ScalarProperty Name="Visit_ID" ColumnName="Visit_ID" />
+          <ScalarProperty Name="Procedure_ID" ColumnName="Procedure_ID" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Visits">
+      <EntityTypeMapping TypeName="ClinicModel.Visits">
+        <MappingFragment StoreEntitySet="Visits">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DateStart" ColumnName="DateStart" />
+          <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Cabinet_ID" ColumnName="Cabinet_ID" />
+          <ScalarProperty Name="Patient_ID" ColumnName="Patient_ID" />
+          <ScalarProperty Name="Result" ColumnName="Result" />
+          <ScalarProperty Name="Worker_ID" ColumnName="Worker_ID" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VisitWorkers">
+      <EntityTypeMapping TypeName="ClinicModel.VisitWorkers">
+        <MappingFragment StoreEntitySet="VisitWorkers">
+          <ScalarProperty Name="Visit_ID" ColumnName="Visit_ID" />
+          <ScalarProperty Name="Worker_ID" ColumnName="Worker_ID" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkerProcedures">
+      <EntityTypeMapping TypeName="ClinicModel.WorkerProcedures">
+        <MappingFragment StoreEntitySet="WorkerProcedures">
+          <ScalarProperty Name="Worker_ID" ColumnName="Worker_ID" />
+          <ScalarProperty Name="Procedure_ID" ColumnName="Procedure_ID" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Workers">
+      <EntityTypeMapping TypeName="ClinicModel.Workers">
+        <MappingFragment StoreEntitySet="Workers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TelephoneNumber" ColumnName="TelephoneNumber" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Specialization" ColumnName="Specialization" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkerTypeOfProcedures">
+      <EntityTypeMapping TypeName="ClinicModel.WorkerTypeOfProcedures">
+        <MappingFragment StoreEntitySet="WorkerTypeOfProcedures">
+          <ScalarProperty Name="Worker_ID" ColumnName="Worker_ID" />
+          <ScalarProperty Name="TypeOfProcedure_ID" ColumnName="TypeOfProcedure_ID" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkerWorkingHours">
+      <EntityTypeMapping TypeName="ClinicModel.WorkerWorkingHours">
+        <MappingFragment StoreEntitySet="WorkerWorkingHours">
+          <ScalarProperty Name="Worker_ID" ColumnName="Worker_ID" />
+          <ScalarProperty Name="WorkingHour_ID" ColumnName="WorkingHour_ID" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkingHours">
+      <EntityTypeMapping TypeName="ClinicModel.WorkingHours">
+        <MappingFragment StoreEntitySet="WorkingHours">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Worker_ID" ColumnName="Worker_ID" />
+          <ScalarProperty Name="Cabinet_ID" ColumnName="Cabinet_ID" />
+          <ScalarProperty Name="TimeStart" ColumnName="TimeStart" />
+          <ScalarProperty Name="TimeEnd" ColumnName="TimeEnd" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

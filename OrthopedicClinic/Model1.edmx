@@ -1,0 +1,2063 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище ClinicModel" Provider="System.Data.SQLite.EF6" ProviderManifestToken="data source=&quot;C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\Clinic.db&quot;" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CabinetProcedures">
+          <Key>
+            <PropertyRef Name="Cabinet_ID" />
+            <PropertyRef Name="ProcedureType_ID" />
+          </Key>
+          <Property Name="Cabinet_ID" Type="int" Nullable="false" />
+          <Property Name="ProcedureType_ID" Type="int" Nullable="false" />
+          <Property Name="DeleteTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Cabinets">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="DeleteTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Diagnosises">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Patient_ID" Type="int" />
+          <Property Name="Worker_ID" Type="int" />
+          <Property Name="DeleteTime" Type="datetime" />
+          <Property Name="Status" Type="nvarchar" MaxLength="100" />
+          <Property Name="Date" Type="datetime" />
+        </EntityType>
+        <EntityType Name="DiagnosisesProcedures">
+          <Key>
+            <PropertyRef Name="Diagnosis_ID" />
+            <PropertyRef Name="Procedure_ID" />
+          </Key>
+          <Property Name="Diagnosis_ID" Type="int" Nullable="false" />
+          <Property Name="Procedure_ID" Type="int" Nullable="false" />
+          <Property Name="DeleteTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="FilesProcedures">
+          <Key>
+            <PropertyRef Name="Procedure_ID" />
+            <PropertyRef Name="Path" />
+          </Key>
+          <Property Name="Procedure_ID" Type="int" Nullable="false" />
+          <Property Name="Path" Type="nvarchar" MaxLength="1000" Nullable="false" />
+        </EntityType>
+        <EntityType Name="KindOfProcedures">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="TypeOfProcedure_ID" Type="int" />
+          <Property Name="DeleteTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Patients">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Comment" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Height" Type="real" />
+          <Property Name="Weight" Type="real" />
+          <Property Name="TelephoneNumber" Type="nvarchar" MaxLength="11" />
+          <Property Name="DeleteTime" Type="datetime" />
+          <Property Name="Login" Type="nvarchar" MaxLength="100" />
+          <Property Name="Password" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Pays">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="Patient_ID" Type="int" />
+          <Property Name="Procedure_ID" Type="int" />
+          <Property Name="Worker_ID" Type="int" />
+          <Property Name="Status" Type="int" />
+        </EntityType>
+        <EntityType Name="Procedures">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="DateFact" Type="datetime" />
+          <Property Name="DateEventStart" Type="datetime" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+          <Property Name="KindOfProcedure_ID" Type="int" />
+          <Property Name="TypeOfProcedure_ID" Type="int" />
+          <Property Name="DeleteTime" Type="datetime" />
+          <Property Name="Patient_ID" Type="int" />
+          <Property Name="Worker_ID" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Cabinet_ID" Type="int" />
+          <Property Name="IsOurs" Type="int" />
+          <Property Name="DateEventEnd" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TreatmentPlanDagnosises">
+          <Key>
+            <PropertyRef Name="TreatmentPlan_ID" />
+            <PropertyRef Name="Diagnosis_ID" />
+          </Key>
+          <Property Name="TreatmentPlan_ID" Type="int" Nullable="false" />
+          <Property Name="Diagnosis_ID" Type="int" Nullable="false" />
+          <Property Name="DeleteTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TreatmentPlanProcedures">
+          <Key>
+            <PropertyRef Name="TreatmentPlan_ID" />
+            <PropertyRef Name="Procedure_ID" />
+          </Key>
+          <Property Name="TreatmentPlan_ID" Type="int" Nullable="false" />
+          <Property Name="Procedure_ID" Type="int" Nullable="false" />
+          <Property Name="Count" Type="int" />
+          <Property Name="DeleteTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TreatmentPlans">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Patient_ID" Type="int" />
+          <Property Name="Worker_ID" Type="int" />
+          <Property Name="DeleteTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TypeOfProcedures">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+          <Property Name="KindOfProcedure_ID" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price" Type="real" />
+          <Property Name="DeleteTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="VisitProcedures">
+          <Key>
+            <PropertyRef Name="Visit_ID" />
+            <PropertyRef Name="Procedure_ID" />
+          </Key>
+          <Property Name="Visit_ID" Type="int" Nullable="false" />
+          <Property Name="Procedure_ID" Type="int" Nullable="false" />
+          <Property Name="DeleteTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Visits">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="DateStart" Type="datetime" />
+          <Property Name="DateEnd" Type="datetime" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+          <Property Name="Cabinet_ID" Type="int" />
+          <Property Name="Patient_ID" Type="int" />
+          <Property Name="Result" Type="nvarchar" MaxLength="100" />
+          <Property Name="Worker_ID" Type="int" />
+          <Property Name="DeleteTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="VisitWorkers">
+          <Key>
+            <PropertyRef Name="Visit_ID" />
+            <PropertyRef Name="Worker_ID" />
+          </Key>
+          <Property Name="Visit_ID" Type="int" Nullable="false" />
+          <Property Name="Worker_ID" Type="int" Nullable="false" />
+          <Property Name="DeleteTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="WorkerProcedures">
+          <Key>
+            <PropertyRef Name="Worker_ID" />
+            <PropertyRef Name="Procedure_ID" />
+          </Key>
+          <Property Name="Worker_ID" Type="int" Nullable="false" />
+          <Property Name="Procedure_ID" Type="int" Nullable="false" />
+          <Property Name="DeleteTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Workers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="TelephoneNumber" Type="nvarchar" MaxLength="11" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Specialization" Type="nvarchar" MaxLength="50" />
+          <Property Name="DeleteTime" Type="datetime" />
+          <Property Name="Login" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="WorkerTypeOfProcedures">
+          <Key>
+            <PropertyRef Name="Worker_ID" />
+            <PropertyRef Name="TypeOfProcedure_ID" />
+          </Key>
+          <Property Name="Worker_ID" Type="int" Nullable="false" />
+          <Property Name="TypeOfProcedure_ID" Type="int" Nullable="false" />
+          <Property Name="DeleteTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="WorkerWorkingHours">
+          <Key>
+            <PropertyRef Name="Worker_ID" />
+            <PropertyRef Name="WorkingHour_ID" />
+          </Key>
+          <Property Name="Worker_ID" Type="int" Nullable="false" />
+          <Property Name="WorkingHour_ID" Type="int" Nullable="false" />
+          <Property Name="DeleteTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="WorkingHours">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Worker_ID" Type="int" />
+          <Property Name="Cabinet_ID" Type="int" />
+          <Property Name="TimeStart" Type="datetime" />
+          <Property Name="TimeEnd" Type="datetime" />
+          <Property Name="DeleteTime" Type="datetime" />
+        </EntityType>
+        <Association Name="FK_CabinetProcedures_0_0">
+          <End Role="Cabinets" Type="Self.Cabinets" Multiplicity="1" />
+          <End Role="CabinetProcedures" Type="Self.CabinetProcedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cabinets">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CabinetProcedures">
+              <PropertyRef Name="Cabinet_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CabinetProcedures_1_0">
+          <End Role="TypeOfProcedures" Type="Self.TypeOfProcedures" Multiplicity="1" />
+          <End Role="CabinetProcedures" Type="Self.CabinetProcedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeOfProcedures">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CabinetProcedures">
+              <PropertyRef Name="ProcedureType_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Diagnosises_0_0">
+          <End Role="Patients" Type="Self.Patients" Multiplicity="0..1" />
+          <End Role="Diagnosises" Type="Self.Diagnosises" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Patients">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Diagnosises">
+              <PropertyRef Name="Patient_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Diagnosises_1_0">
+          <End Role="Workers" Type="Self.Workers" Multiplicity="0..1" />
+          <End Role="Diagnosises" Type="Self.Diagnosises" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Diagnosises">
+              <PropertyRef Name="Worker_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DiagnosisesProcedures_0_0">
+          <End Role="Procedures" Type="Self.Procedures" Multiplicity="1" />
+          <End Role="DiagnosisesProcedures" Type="Self.DiagnosisesProcedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Procedures">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DiagnosisesProcedures">
+              <PropertyRef Name="Procedure_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DiagnosisesProcedures_1_0">
+          <End Role="Diagnosises" Type="Self.Diagnosises" Multiplicity="1" />
+          <End Role="DiagnosisesProcedures" Type="Self.DiagnosisesProcedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Diagnosises">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DiagnosisesProcedures">
+              <PropertyRef Name="Diagnosis_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FilesProcedures_0_0">
+          <End Role="Procedures" Type="Self.Procedures" Multiplicity="1" />
+          <End Role="FilesProcedures" Type="Self.FilesProcedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Procedures">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FilesProcedures">
+              <PropertyRef Name="Procedure_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KindOfProcedures_0_0">
+          <End Role="TypeOfProcedures" Type="Self.TypeOfProcedures" Multiplicity="0..1" />
+          <End Role="KindOfProcedures" Type="Self.KindOfProcedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeOfProcedures">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="KindOfProcedures">
+              <PropertyRef Name="TypeOfProcedure_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pays_0_0">
+          <End Role="Patients" Type="Self.Patients" Multiplicity="0..1" />
+          <End Role="Pays" Type="Self.Pays" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Patients">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Pays">
+              <PropertyRef Name="Patient_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pays_1_0">
+          <End Role="Workers" Type="Self.Workers" Multiplicity="0..1" />
+          <End Role="Pays" Type="Self.Pays" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Pays">
+              <PropertyRef Name="Worker_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pays_2_0">
+          <End Role="Procedures" Type="Self.Procedures" Multiplicity="0..1" />
+          <End Role="Pays" Type="Self.Pays" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Procedures">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Pays">
+              <PropertyRef Name="Procedure_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Procedures_0_0">
+          <End Role="Patients" Type="Self.Patients" Multiplicity="0..1" />
+          <End Role="Procedures" Type="Self.Procedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Patients">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Procedures">
+              <PropertyRef Name="Patient_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Procedures_1_0">
+          <End Role="KindOfProcedures" Type="Self.KindOfProcedures" Multiplicity="0..1" />
+          <End Role="Procedures" Type="Self.Procedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KindOfProcedures">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Procedures">
+              <PropertyRef Name="KindOfProcedure_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Procedures_2_0">
+          <End Role="Cabinets" Type="Self.Cabinets" Multiplicity="0..1" />
+          <End Role="Procedures" Type="Self.Procedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cabinets">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Procedures">
+              <PropertyRef Name="Cabinet_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Procedures_3_0">
+          <End Role="Workers" Type="Self.Workers" Multiplicity="0..1" />
+          <End Role="Procedures" Type="Self.Procedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Procedures">
+              <PropertyRef Name="Worker_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Procedures_4_0">
+          <End Role="TypeOfProcedures" Type="Self.TypeOfProcedures" Multiplicity="0..1" />
+          <End Role="Procedures" Type="Self.Procedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeOfProcedures">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Procedures">
+              <PropertyRef Name="TypeOfProcedure_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TreatmentPlanDagnosises_0_0">
+          <End Role="TreatmentPlans" Type="Self.TreatmentPlans" Multiplicity="1" />
+          <End Role="TreatmentPlanDagnosises" Type="Self.TreatmentPlanDagnosises" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TreatmentPlans">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TreatmentPlanDagnosises">
+              <PropertyRef Name="TreatmentPlan_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TreatmentPlanDagnosises_1_0">
+          <End Role="Diagnosises" Type="Self.Diagnosises" Multiplicity="1" />
+          <End Role="TreatmentPlanDagnosises" Type="Self.TreatmentPlanDagnosises" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Diagnosises">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TreatmentPlanDagnosises">
+              <PropertyRef Name="Diagnosis_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TreatmentPlanProcedures_0_0">
+          <End Role="Procedures" Type="Self.Procedures" Multiplicity="1" />
+          <End Role="TreatmentPlanProcedures" Type="Self.TreatmentPlanProcedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Procedures">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TreatmentPlanProcedures">
+              <PropertyRef Name="Procedure_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TreatmentPlanProcedures_1_0">
+          <End Role="TreatmentPlans" Type="Self.TreatmentPlans" Multiplicity="1" />
+          <End Role="TreatmentPlanProcedures" Type="Self.TreatmentPlanProcedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TreatmentPlans">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TreatmentPlanProcedures">
+              <PropertyRef Name="TreatmentPlan_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TreatmentPlans_0_0">
+          <End Role="Workers" Type="Self.Workers" Multiplicity="0..1" />
+          <End Role="TreatmentPlans" Type="Self.TreatmentPlans" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TreatmentPlans">
+              <PropertyRef Name="Worker_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TreatmentPlans_1_0">
+          <End Role="Patients" Type="Self.Patients" Multiplicity="0..1" />
+          <End Role="TreatmentPlans" Type="Self.TreatmentPlans" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Patients">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TreatmentPlans">
+              <PropertyRef Name="Patient_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TypeOfProcedures_0_0">
+          <End Role="KindOfProcedures" Type="Self.KindOfProcedures" Multiplicity="0..1" />
+          <End Role="TypeOfProcedures" Type="Self.TypeOfProcedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KindOfProcedures">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TypeOfProcedures">
+              <PropertyRef Name="KindOfProcedure_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VisitProcedures_0_0">
+          <End Role="Procedures" Type="Self.Procedures" Multiplicity="1" />
+          <End Role="VisitProcedures" Type="Self.VisitProcedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Procedures">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="VisitProcedures">
+              <PropertyRef Name="Procedure_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VisitProcedures_1_0">
+          <End Role="Visits" Type="Self.Visits" Multiplicity="1" />
+          <End Role="VisitProcedures" Type="Self.VisitProcedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Visits">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="VisitProcedures">
+              <PropertyRef Name="Visit_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Visits_0_0">
+          <End Role="Cabinets" Type="Self.Cabinets" Multiplicity="0..1" />
+          <End Role="Visits" Type="Self.Visits" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cabinets">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Visits">
+              <PropertyRef Name="Cabinet_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Visits_1_0">
+          <End Role="Workers" Type="Self.Workers" Multiplicity="0..1" />
+          <End Role="Visits" Type="Self.Visits" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Visits">
+              <PropertyRef Name="Worker_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Visits_2_0">
+          <End Role="Patients" Type="Self.Patients" Multiplicity="0..1" />
+          <End Role="Visits" Type="Self.Visits" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Patients">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Visits">
+              <PropertyRef Name="Patient_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VisitWorkers_0_0">
+          <End Role="Visits" Type="Self.Visits" Multiplicity="1" />
+          <End Role="VisitWorkers" Type="Self.VisitWorkers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Visits">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="VisitWorkers">
+              <PropertyRef Name="Visit_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VisitWorkers_1_0">
+          <End Role="Workers" Type="Self.Workers" Multiplicity="1" />
+          <End Role="VisitWorkers" Type="Self.VisitWorkers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="VisitWorkers">
+              <PropertyRef Name="Worker_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorkerProcedures_0_0">
+          <End Role="Workers" Type="Self.Workers" Multiplicity="1" />
+          <End Role="WorkerProcedures" Type="Self.WorkerProcedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WorkerProcedures">
+              <PropertyRef Name="Worker_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorkerProcedures_1_0">
+          <End Role="TypeOfProcedures" Type="Self.TypeOfProcedures" Multiplicity="1" />
+          <End Role="WorkerProcedures" Type="Self.WorkerProcedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeOfProcedures">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WorkerProcedures">
+              <PropertyRef Name="Procedure_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorkerTypeOfProcedures_0_0">
+          <End Role="Workers" Type="Self.Workers" Multiplicity="1" />
+          <End Role="WorkerTypeOfProcedures" Type="Self.WorkerTypeOfProcedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WorkerTypeOfProcedures">
+              <PropertyRef Name="Worker_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorkerTypeOfProcedures_1_0">
+          <End Role="TypeOfProcedures" Type="Self.TypeOfProcedures" Multiplicity="1" />
+          <End Role="WorkerTypeOfProcedures" Type="Self.WorkerTypeOfProcedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeOfProcedures">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WorkerTypeOfProcedures">
+              <PropertyRef Name="TypeOfProcedure_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorkerWorkingHours_0_0">
+          <End Role="Workers" Type="Self.Workers" Multiplicity="1" />
+          <End Role="WorkerWorkingHours" Type="Self.WorkerWorkingHours" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WorkerWorkingHours">
+              <PropertyRef Name="Worker_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorkerWorkingHours_1_0">
+          <End Role="WorkingHours" Type="Self.WorkingHours" Multiplicity="1" />
+          <End Role="WorkerWorkingHours" Type="Self.WorkerWorkingHours" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WorkingHours">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WorkerWorkingHours">
+              <PropertyRef Name="WorkingHour_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorkingHours_0_0">
+          <End Role="Cabinets" Type="Self.Cabinets" Multiplicity="0..1" />
+          <End Role="WorkingHours" Type="Self.WorkingHours" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cabinets">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WorkingHours">
+              <PropertyRef Name="Cabinet_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorkingHours_1_0">
+          <End Role="Workers" Type="Self.Workers" Multiplicity="0..1" />
+          <End Role="WorkingHours" Type="Self.WorkingHours" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WorkingHours">
+              <PropertyRef Name="Worker_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище ClinicModelContainer">
+          <EntitySet Name="CabinetProcedures" EntityType="Self.CabinetProcedures" store:Type="Tables" />
+          <EntitySet Name="Cabinets" EntityType="Self.Cabinets" store:Type="Tables" />
+          <EntitySet Name="Diagnosises" EntityType="Self.Diagnosises" store:Type="Tables" />
+          <EntitySet Name="DiagnosisesProcedures" EntityType="Self.DiagnosisesProcedures" store:Type="Tables" />
+          <EntitySet Name="FilesProcedures" EntityType="Self.FilesProcedures" store:Type="Tables" />
+          <EntitySet Name="KindOfProcedures" EntityType="Self.KindOfProcedures" store:Type="Tables" />
+          <EntitySet Name="Patients" EntityType="Self.Patients" store:Type="Tables" />
+          <EntitySet Name="Pays" EntityType="Self.Pays" store:Type="Tables" />
+          <EntitySet Name="Procedures" EntityType="Self.Procedures" store:Type="Tables" />
+          <EntitySet Name="TreatmentPlanDagnosises" EntityType="Self.TreatmentPlanDagnosises" store:Type="Tables" />
+          <EntitySet Name="TreatmentPlanProcedures" EntityType="Self.TreatmentPlanProcedures" store:Type="Tables" />
+          <EntitySet Name="TreatmentPlans" EntityType="Self.TreatmentPlans" store:Type="Tables" />
+          <EntitySet Name="TypeOfProcedures" EntityType="Self.TypeOfProcedures" store:Type="Tables" />
+          <EntitySet Name="VisitProcedures" EntityType="Self.VisitProcedures" store:Type="Tables" />
+          <EntitySet Name="Visits" EntityType="Self.Visits" store:Type="Tables" />
+          <EntitySet Name="VisitWorkers" EntityType="Self.VisitWorkers" store:Type="Tables" />
+          <EntitySet Name="WorkerProcedures" EntityType="Self.WorkerProcedures" store:Type="Tables" />
+          <EntitySet Name="Workers" EntityType="Self.Workers" store:Type="Tables" />
+          <EntitySet Name="WorkerTypeOfProcedures" EntityType="Self.WorkerTypeOfProcedures" store:Type="Tables" />
+          <EntitySet Name="WorkerWorkingHours" EntityType="Self.WorkerWorkingHours" store:Type="Tables" />
+          <EntitySet Name="WorkingHours" EntityType="Self.WorkingHours" store:Type="Tables" />
+          <AssociationSet Name="FK_CabinetProcedures_0_0" Association="Self.FK_CabinetProcedures_0_0">
+            <End Role="Cabinets" EntitySet="Cabinets" />
+            <End Role="CabinetProcedures" EntitySet="CabinetProcedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CabinetProcedures_1_0" Association="Self.FK_CabinetProcedures_1_0">
+            <End Role="TypeOfProcedures" EntitySet="TypeOfProcedures" />
+            <End Role="CabinetProcedures" EntitySet="CabinetProcedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Diagnosises_0_0" Association="Self.FK_Diagnosises_0_0">
+            <End Role="Patients" EntitySet="Patients" />
+            <End Role="Diagnosises" EntitySet="Diagnosises" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Diagnosises_1_0" Association="Self.FK_Diagnosises_1_0">
+            <End Role="Workers" EntitySet="Workers" />
+            <End Role="Diagnosises" EntitySet="Diagnosises" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DiagnosisesProcedures_0_0" Association="Self.FK_DiagnosisesProcedures_0_0">
+            <End Role="Procedures" EntitySet="Procedures" />
+            <End Role="DiagnosisesProcedures" EntitySet="DiagnosisesProcedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DiagnosisesProcedures_1_0" Association="Self.FK_DiagnosisesProcedures_1_0">
+            <End Role="Diagnosises" EntitySet="Diagnosises" />
+            <End Role="DiagnosisesProcedures" EntitySet="DiagnosisesProcedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FilesProcedures_0_0" Association="Self.FK_FilesProcedures_0_0">
+            <End Role="Procedures" EntitySet="Procedures" />
+            <End Role="FilesProcedures" EntitySet="FilesProcedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KindOfProcedures_0_0" Association="Self.FK_KindOfProcedures_0_0">
+            <End Role="TypeOfProcedures" EntitySet="TypeOfProcedures" />
+            <End Role="KindOfProcedures" EntitySet="KindOfProcedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pays_0_0" Association="Self.FK_Pays_0_0">
+            <End Role="Patients" EntitySet="Patients" />
+            <End Role="Pays" EntitySet="Pays" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pays_1_0" Association="Self.FK_Pays_1_0">
+            <End Role="Workers" EntitySet="Workers" />
+            <End Role="Pays" EntitySet="Pays" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pays_2_0" Association="Self.FK_Pays_2_0">
+            <End Role="Procedures" EntitySet="Procedures" />
+            <End Role="Pays" EntitySet="Pays" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Procedures_0_0" Association="Self.FK_Procedures_0_0">
+            <End Role="Patients" EntitySet="Patients" />
+            <End Role="Procedures" EntitySet="Procedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Procedures_1_0" Association="Self.FK_Procedures_1_0">
+            <End Role="KindOfProcedures" EntitySet="KindOfProcedures" />
+            <End Role="Procedures" EntitySet="Procedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Procedures_2_0" Association="Self.FK_Procedures_2_0">
+            <End Role="Cabinets" EntitySet="Cabinets" />
+            <End Role="Procedures" EntitySet="Procedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Procedures_3_0" Association="Self.FK_Procedures_3_0">
+            <End Role="Workers" EntitySet="Workers" />
+            <End Role="Procedures" EntitySet="Procedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Procedures_4_0" Association="Self.FK_Procedures_4_0">
+            <End Role="TypeOfProcedures" EntitySet="TypeOfProcedures" />
+            <End Role="Procedures" EntitySet="Procedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TreatmentPlanDagnosises_0_0" Association="Self.FK_TreatmentPlanDagnosises_0_0">
+            <End Role="TreatmentPlans" EntitySet="TreatmentPlans" />
+            <End Role="TreatmentPlanDagnosises" EntitySet="TreatmentPlanDagnosises" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TreatmentPlanDagnosises_1_0" Association="Self.FK_TreatmentPlanDagnosises_1_0">
+            <End Role="Diagnosises" EntitySet="Diagnosises" />
+            <End Role="TreatmentPlanDagnosises" EntitySet="TreatmentPlanDagnosises" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TreatmentPlanProcedures_0_0" Association="Self.FK_TreatmentPlanProcedures_0_0">
+            <End Role="Procedures" EntitySet="Procedures" />
+            <End Role="TreatmentPlanProcedures" EntitySet="TreatmentPlanProcedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TreatmentPlanProcedures_1_0" Association="Self.FK_TreatmentPlanProcedures_1_0">
+            <End Role="TreatmentPlans" EntitySet="TreatmentPlans" />
+            <End Role="TreatmentPlanProcedures" EntitySet="TreatmentPlanProcedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TreatmentPlans_0_0" Association="Self.FK_TreatmentPlans_0_0">
+            <End Role="Workers" EntitySet="Workers" />
+            <End Role="TreatmentPlans" EntitySet="TreatmentPlans" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TreatmentPlans_1_0" Association="Self.FK_TreatmentPlans_1_0">
+            <End Role="Patients" EntitySet="Patients" />
+            <End Role="TreatmentPlans" EntitySet="TreatmentPlans" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TypeOfProcedures_0_0" Association="Self.FK_TypeOfProcedures_0_0">
+            <End Role="KindOfProcedures" EntitySet="KindOfProcedures" />
+            <End Role="TypeOfProcedures" EntitySet="TypeOfProcedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VisitProcedures_0_0" Association="Self.FK_VisitProcedures_0_0">
+            <End Role="Procedures" EntitySet="Procedures" />
+            <End Role="VisitProcedures" EntitySet="VisitProcedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VisitProcedures_1_0" Association="Self.FK_VisitProcedures_1_0">
+            <End Role="Visits" EntitySet="Visits" />
+            <End Role="VisitProcedures" EntitySet="VisitProcedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Visits_0_0" Association="Self.FK_Visits_0_0">
+            <End Role="Cabinets" EntitySet="Cabinets" />
+            <End Role="Visits" EntitySet="Visits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Visits_1_0" Association="Self.FK_Visits_1_0">
+            <End Role="Workers" EntitySet="Workers" />
+            <End Role="Visits" EntitySet="Visits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Visits_2_0" Association="Self.FK_Visits_2_0">
+            <End Role="Patients" EntitySet="Patients" />
+            <End Role="Visits" EntitySet="Visits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VisitWorkers_0_0" Association="Self.FK_VisitWorkers_0_0">
+            <End Role="Visits" EntitySet="Visits" />
+            <End Role="VisitWorkers" EntitySet="VisitWorkers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VisitWorkers_1_0" Association="Self.FK_VisitWorkers_1_0">
+            <End Role="Workers" EntitySet="Workers" />
+            <End Role="VisitWorkers" EntitySet="VisitWorkers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorkerProcedures_0_0" Association="Self.FK_WorkerProcedures_0_0">
+            <End Role="Workers" EntitySet="Workers" />
+            <End Role="WorkerProcedures" EntitySet="WorkerProcedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorkerProcedures_1_0" Association="Self.FK_WorkerProcedures_1_0">
+            <End Role="TypeOfProcedures" EntitySet="TypeOfProcedures" />
+            <End Role="WorkerProcedures" EntitySet="WorkerProcedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorkerTypeOfProcedures_0_0" Association="Self.FK_WorkerTypeOfProcedures_0_0">
+            <End Role="Workers" EntitySet="Workers" />
+            <End Role="WorkerTypeOfProcedures" EntitySet="WorkerTypeOfProcedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorkerTypeOfProcedures_1_0" Association="Self.FK_WorkerTypeOfProcedures_1_0">
+            <End Role="TypeOfProcedures" EntitySet="TypeOfProcedures" />
+            <End Role="WorkerTypeOfProcedures" EntitySet="WorkerTypeOfProcedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorkerWorkingHours_0_0" Association="Self.FK_WorkerWorkingHours_0_0">
+            <End Role="Workers" EntitySet="Workers" />
+            <End Role="WorkerWorkingHours" EntitySet="WorkerWorkingHours" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorkerWorkingHours_1_0" Association="Self.FK_WorkerWorkingHours_1_0">
+            <End Role="WorkingHours" EntitySet="WorkingHours" />
+            <End Role="WorkerWorkingHours" EntitySet="WorkerWorkingHours" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorkingHours_0_0" Association="Self.FK_WorkingHours_0_0">
+            <End Role="Cabinets" EntitySet="Cabinets" />
+            <End Role="WorkingHours" EntitySet="WorkingHours" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorkingHours_1_0" Association="Self.FK_WorkingHours_1_0">
+            <End Role="Workers" EntitySet="Workers" />
+            <End Role="WorkingHours" EntitySet="WorkingHours" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ClinicModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CabinetProcedures">
+          <Key>
+            <PropertyRef Name="Cabinet_ID" />
+            <PropertyRef Name="ProcedureType_ID" />
+          </Key>
+          <Property Name="Cabinet_ID" Type="Int32" Nullable="false" />
+          <Property Name="ProcedureType_ID" Type="Int32" Nullable="false" />
+          <Property Name="DeleteTime" Type="DateTime" />
+          <NavigationProperty Name="Cabinets" Relationship="Self.FK_CabinetProcedures_0_0" FromRole="CabinetProcedures" ToRole="Cabinets" />
+          <NavigationProperty Name="TypeOfProcedures" Relationship="Self.FK_CabinetProcedures_1_0" FromRole="CabinetProcedures" ToRole="TypeOfProcedures" />
+        </EntityType>
+        <EntityType Name="Cabinets">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DeleteTime" Type="DateTime" />
+          <NavigationProperty Name="CabinetProcedures" Relationship="Self.FK_CabinetProcedures_0_0" FromRole="Cabinets" ToRole="CabinetProcedures" />
+          <NavigationProperty Name="Procedures" Relationship="Self.FK_Procedures_2_0" FromRole="Cabinets" ToRole="Procedures" />
+          <NavigationProperty Name="Visits" Relationship="Self.FK_Visits_0_0" FromRole="Cabinets" ToRole="Visits" />
+          <NavigationProperty Name="WorkingHours" Relationship="Self.FK_WorkingHours_0_0" FromRole="Cabinets" ToRole="WorkingHours" />
+        </EntityType>
+        <EntityType Name="Diagnosises">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Patient_ID" Type="Int32" />
+          <Property Name="Worker_ID" Type="Int32" />
+          <Property Name="DeleteTime" Type="DateTime" />
+          <Property Name="Status" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" />
+          <NavigationProperty Name="Patients" Relationship="Self.FK_Diagnosises_0_0" FromRole="Diagnosises" ToRole="Patients" />
+          <NavigationProperty Name="Workers" Relationship="Self.FK_Diagnosises_1_0" FromRole="Diagnosises" ToRole="Workers" />
+          <NavigationProperty Name="DiagnosisesProcedures" Relationship="Self.FK_DiagnosisesProcedures_1_0" FromRole="Diagnosises" ToRole="DiagnosisesProcedures" />
+          <NavigationProperty Name="TreatmentPlanDagnosises" Relationship="Self.FK_TreatmentPlanDagnosises_1_0" FromRole="Diagnosises" ToRole="TreatmentPlanDagnosises" />
+        </EntityType>
+        <EntityType Name="DiagnosisesProcedures">
+          <Key>
+            <PropertyRef Name="Diagnosis_ID" />
+            <PropertyRef Name="Procedure_ID" />
+          </Key>
+          <Property Name="Diagnosis_ID" Type="Int32" Nullable="false" />
+          <Property Name="Procedure_ID" Type="Int32" Nullable="false" />
+          <Property Name="DeleteTime" Type="DateTime" />
+          <NavigationProperty Name="Diagnosises" Relationship="Self.FK_DiagnosisesProcedures_1_0" FromRole="DiagnosisesProcedures" ToRole="Diagnosises" />
+          <NavigationProperty Name="Procedures" Relationship="Self.FK_DiagnosisesProcedures_0_0" FromRole="DiagnosisesProcedures" ToRole="Procedures" />
+        </EntityType>
+        <EntityType Name="FilesProcedures">
+          <Key>
+            <PropertyRef Name="Procedure_ID" />
+            <PropertyRef Name="Path" />
+          </Key>
+          <Property Name="Procedure_ID" Type="Int32" Nullable="false" />
+          <Property Name="Path" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Procedures" Relationship="Self.FK_FilesProcedures_0_0" FromRole="FilesProcedures" ToRole="Procedures" />
+        </EntityType>
+        <EntityType Name="KindOfProcedures">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TypeOfProcedure_ID" Type="Int32" />
+          <Property Name="DeleteTime" Type="DateTime" />
+          <NavigationProperty Name="TypeOfProcedures" Relationship="Self.FK_KindOfProcedures_0_0" FromRole="KindOfProcedures" ToRole="TypeOfProcedures" />
+          <NavigationProperty Name="Procedures" Relationship="Self.FK_Procedures_1_0" FromRole="KindOfProcedures" ToRole="Procedures" />
+          <NavigationProperty Name="TypeOfProcedures1" Relationship="Self.FK_TypeOfProcedures_0_0" FromRole="KindOfProcedures" ToRole="TypeOfProcedures" />
+        </EntityType>
+        <EntityType Name="Patients">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Comment" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Height" Type="Double" />
+          <Property Name="Weight" Type="Double" />
+          <Property Name="TelephoneNumber" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="DeleteTime" Type="DateTime" />
+          <Property Name="Login" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Diagnosises" Relationship="Self.FK_Diagnosises_0_0" FromRole="Patients" ToRole="Diagnosises" />
+          <NavigationProperty Name="Pays" Relationship="Self.FK_Pays_0_0" FromRole="Patients" ToRole="Pays" />
+          <NavigationProperty Name="Procedures" Relationship="Self.FK_Procedures_0_0" FromRole="Patients" ToRole="Procedures" />
+          <NavigationProperty Name="TreatmentPlans" Relationship="Self.FK_TreatmentPlans_1_0" FromRole="Patients" ToRole="TreatmentPlans" />
+          <NavigationProperty Name="Visits" Relationship="Self.FK_Visits_2_0" FromRole="Patients" ToRole="Visits" />
+        </EntityType>
+        <EntityType Name="Pays">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" />
+          <Property Name="Patient_ID" Type="Int32" />
+          <Property Name="Procedure_ID" Type="Int32" />
+          <Property Name="Worker_ID" Type="Int32" />
+          <Property Name="Status" Type="Int32" />
+          <NavigationProperty Name="Patients" Relationship="Self.FK_Pays_0_0" FromRole="Pays" ToRole="Patients" />
+          <NavigationProperty Name="Workers" Relationship="Self.FK_Pays_1_0" FromRole="Pays" ToRole="Workers" />
+          <NavigationProperty Name="Procedures" Relationship="Self.FK_Pays_2_0" FromRole="Pays" ToRole="Procedures" />
+        </EntityType>
+        <EntityType Name="Procedures">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="DateFact" Type="DateTime" />
+          <Property Name="DateEventStart" Type="DateTime" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="KindOfProcedure_ID" Type="Int32" />
+          <Property Name="TypeOfProcedure_ID" Type="Int32" />
+          <Property Name="DeleteTime" Type="DateTime" />
+          <Property Name="Patient_ID" Type="Int32" />
+          <Property Name="Worker_ID" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Cabinet_ID" Type="Int32" />
+          <Property Name="IsOurs" Type="Int32" />
+          <Property Name="DateEventEnd" Type="DateTime" />
+          <NavigationProperty Name="Cabinets" Relationship="Self.FK_Procedures_2_0" FromRole="Procedures" ToRole="Cabinets" />
+          <NavigationProperty Name="DiagnosisesProcedures" Relationship="Self.FK_DiagnosisesProcedures_0_0" FromRole="Procedures" ToRole="DiagnosisesProcedures" />
+          <NavigationProperty Name="FilesProcedures" Relationship="Self.FK_FilesProcedures_0_0" FromRole="Procedures" ToRole="FilesProcedures" />
+          <NavigationProperty Name="KindOfProcedures" Relationship="Self.FK_Procedures_1_0" FromRole="Procedures" ToRole="KindOfProcedures" />
+          <NavigationProperty Name="Patients" Relationship="Self.FK_Procedures_0_0" FromRole="Procedures" ToRole="Patients" />
+          <NavigationProperty Name="Pays" Relationship="Self.FK_Pays_2_0" FromRole="Procedures" ToRole="Pays" />
+          <NavigationProperty Name="Workers" Relationship="Self.FK_Procedures_3_0" FromRole="Procedures" ToRole="Workers" />
+          <NavigationProperty Name="TypeOfProcedures" Relationship="Self.FK_Procedures_4_0" FromRole="Procedures" ToRole="TypeOfProcedures" />
+          <NavigationProperty Name="TreatmentPlanProcedures" Relationship="Self.FK_TreatmentPlanProcedures_0_0" FromRole="Procedures" ToRole="TreatmentPlanProcedures" />
+          <NavigationProperty Name="VisitProcedures" Relationship="Self.FK_VisitProcedures_0_0" FromRole="Procedures" ToRole="VisitProcedures" />
+        </EntityType>
+        <EntityType Name="TreatmentPlanDagnosises">
+          <Key>
+            <PropertyRef Name="TreatmentPlan_ID" />
+            <PropertyRef Name="Diagnosis_ID" />
+          </Key>
+          <Property Name="TreatmentPlan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Diagnosis_ID" Type="Int32" Nullable="false" />
+          <Property Name="DeleteTime" Type="DateTime" />
+          <NavigationProperty Name="Diagnosises" Relationship="Self.FK_TreatmentPlanDagnosises_1_0" FromRole="TreatmentPlanDagnosises" ToRole="Diagnosises" />
+          <NavigationProperty Name="TreatmentPlans" Relationship="Self.FK_TreatmentPlanDagnosises_0_0" FromRole="TreatmentPlanDagnosises" ToRole="TreatmentPlans" />
+        </EntityType>
+        <EntityType Name="TreatmentPlanProcedures">
+          <Key>
+            <PropertyRef Name="TreatmentPlan_ID" />
+            <PropertyRef Name="Procedure_ID" />
+          </Key>
+          <Property Name="TreatmentPlan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Procedure_ID" Type="Int32" Nullable="false" />
+          <Property Name="Count" Type="Int32" />
+          <Property Name="DeleteTime" Type="DateTime" />
+          <NavigationProperty Name="Procedures" Relationship="Self.FK_TreatmentPlanProcedures_0_0" FromRole="TreatmentPlanProcedures" ToRole="Procedures" />
+          <NavigationProperty Name="TreatmentPlans" Relationship="Self.FK_TreatmentPlanProcedures_1_0" FromRole="TreatmentPlanProcedures" ToRole="TreatmentPlans" />
+        </EntityType>
+        <EntityType Name="TreatmentPlans">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Patient_ID" Type="Int32" />
+          <Property Name="Worker_ID" Type="Int32" />
+          <Property Name="DeleteTime" Type="DateTime" />
+          <NavigationProperty Name="Patients" Relationship="Self.FK_TreatmentPlans_1_0" FromRole="TreatmentPlans" ToRole="Patients" />
+          <NavigationProperty Name="TreatmentPlanDagnosises" Relationship="Self.FK_TreatmentPlanDagnosises_0_0" FromRole="TreatmentPlans" ToRole="TreatmentPlanDagnosises" />
+          <NavigationProperty Name="TreatmentPlanProcedures" Relationship="Self.FK_TreatmentPlanProcedures_1_0" FromRole="TreatmentPlans" ToRole="TreatmentPlanProcedures" />
+          <NavigationProperty Name="Workers" Relationship="Self.FK_TreatmentPlans_0_0" FromRole="TreatmentPlans" ToRole="Workers" />
+        </EntityType>
+        <EntityType Name="TypeOfProcedures">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="KindOfProcedure_ID" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Double" />
+          <Property Name="DeleteTime" Type="DateTime" />
+          <NavigationProperty Name="CabinetProcedures" Relationship="Self.FK_CabinetProcedures_1_0" FromRole="TypeOfProcedures" ToRole="CabinetProcedures" />
+          <NavigationProperty Name="KindOfProcedures" Relationship="Self.FK_KindOfProcedures_0_0" FromRole="TypeOfProcedures" ToRole="KindOfProcedures" />
+          <NavigationProperty Name="KindOfProcedures1" Relationship="Self.FK_TypeOfProcedures_0_0" FromRole="TypeOfProcedures" ToRole="KindOfProcedures" />
+          <NavigationProperty Name="Procedures" Relationship="Self.FK_Procedures_4_0" FromRole="TypeOfProcedures" ToRole="Procedures" />
+          <NavigationProperty Name="WorkerProcedures" Relationship="Self.FK_WorkerProcedures_1_0" FromRole="TypeOfProcedures" ToRole="WorkerProcedures" />
+          <NavigationProperty Name="WorkerTypeOfProcedures" Relationship="Self.FK_WorkerTypeOfProcedures_1_0" FromRole="TypeOfProcedures" ToRole="WorkerTypeOfProcedures" />
+        </EntityType>
+        <EntityType Name="VisitProcedures">
+          <Key>
+            <PropertyRef Name="Visit_ID" />
+            <PropertyRef Name="Procedure_ID" />
+          </Key>
+          <Property Name="Visit_ID" Type="Int32" Nullable="false" />
+          <Property Name="Procedure_ID" Type="Int32" Nullable="false" />
+          <Property Name="DeleteTime" Type="DateTime" />
+          <NavigationProperty Name="Procedures" Relationship="Self.FK_VisitProcedures_0_0" FromRole="VisitProcedures" ToRole="Procedures" />
+          <NavigationProperty Name="Visits" Relationship="Self.FK_VisitProcedures_1_0" FromRole="VisitProcedures" ToRole="Visits" />
+        </EntityType>
+        <EntityType Name="Visits">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="DateStart" Type="DateTime" />
+          <Property Name="DateEnd" Type="DateTime" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Cabinet_ID" Type="Int32" />
+          <Property Name="Patient_ID" Type="Int32" />
+          <Property Name="Result" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Worker_ID" Type="Int32" />
+          <Property Name="DeleteTime" Type="DateTime" />
+          <NavigationProperty Name="Cabinets" Relationship="Self.FK_Visits_0_0" FromRole="Visits" ToRole="Cabinets" />
+          <NavigationProperty Name="Patients" Relationship="Self.FK_Visits_2_0" FromRole="Visits" ToRole="Patients" />
+          <NavigationProperty Name="VisitProcedures" Relationship="Self.FK_VisitProcedures_1_0" FromRole="Visits" ToRole="VisitProcedures" />
+          <NavigationProperty Name="Workers" Relationship="Self.FK_Visits_1_0" FromRole="Visits" ToRole="Workers" />
+          <NavigationProperty Name="VisitWorkers" Relationship="Self.FK_VisitWorkers_0_0" FromRole="Visits" ToRole="VisitWorkers" />
+        </EntityType>
+        <EntityType Name="VisitWorkers">
+          <Key>
+            <PropertyRef Name="Visit_ID" />
+            <PropertyRef Name="Worker_ID" />
+          </Key>
+          <Property Name="Visit_ID" Type="Int32" Nullable="false" />
+          <Property Name="Worker_ID" Type="Int32" Nullable="false" />
+          <Property Name="DeleteTime" Type="DateTime" />
+          <NavigationProperty Name="Visits" Relationship="Self.FK_VisitWorkers_0_0" FromRole="VisitWorkers" ToRole="Visits" />
+          <NavigationProperty Name="Workers" Relationship="Self.FK_VisitWorkers_1_0" FromRole="VisitWorkers" ToRole="Workers" />
+        </EntityType>
+        <EntityType Name="WorkerProcedures">
+          <Key>
+            <PropertyRef Name="Worker_ID" />
+            <PropertyRef Name="Procedure_ID" />
+          </Key>
+          <Property Name="Worker_ID" Type="Int32" Nullable="false" />
+          <Property Name="Procedure_ID" Type="Int32" Nullable="false" />
+          <Property Name="DeleteTime" Type="DateTime" />
+          <NavigationProperty Name="TypeOfProcedures" Relationship="Self.FK_WorkerProcedures_1_0" FromRole="WorkerProcedures" ToRole="TypeOfProcedures" />
+          <NavigationProperty Name="Workers" Relationship="Self.FK_WorkerProcedures_0_0" FromRole="WorkerProcedures" ToRole="Workers" />
+        </EntityType>
+        <EntityType Name="Workers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="TelephoneNumber" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Specialization" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DeleteTime" Type="DateTime" />
+          <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Diagnosises" Relationship="Self.FK_Diagnosises_1_0" FromRole="Workers" ToRole="Diagnosises" />
+          <NavigationProperty Name="Pays" Relationship="Self.FK_Pays_1_0" FromRole="Workers" ToRole="Pays" />
+          <NavigationProperty Name="Procedures" Relationship="Self.FK_Procedures_3_0" FromRole="Workers" ToRole="Procedures" />
+          <NavigationProperty Name="TreatmentPlans" Relationship="Self.FK_TreatmentPlans_0_0" FromRole="Workers" ToRole="TreatmentPlans" />
+          <NavigationProperty Name="Visits" Relationship="Self.FK_Visits_1_0" FromRole="Workers" ToRole="Visits" />
+          <NavigationProperty Name="VisitWorkers" Relationship="Self.FK_VisitWorkers_1_0" FromRole="Workers" ToRole="VisitWorkers" />
+          <NavigationProperty Name="WorkerProcedures" Relationship="Self.FK_WorkerProcedures_0_0" FromRole="Workers" ToRole="WorkerProcedures" />
+          <NavigationProperty Name="WorkerTypeOfProcedures" Relationship="Self.FK_WorkerTypeOfProcedures_0_0" FromRole="Workers" ToRole="WorkerTypeOfProcedures" />
+          <NavigationProperty Name="WorkerWorkingHours" Relationship="Self.FK_WorkerWorkingHours_0_0" FromRole="Workers" ToRole="WorkerWorkingHours" />
+          <NavigationProperty Name="WorkingHours" Relationship="Self.FK_WorkingHours_1_0" FromRole="Workers" ToRole="WorkingHours" />
+        </EntityType>
+        <EntityType Name="WorkerTypeOfProcedures">
+          <Key>
+            <PropertyRef Name="Worker_ID" />
+            <PropertyRef Name="TypeOfProcedure_ID" />
+          </Key>
+          <Property Name="Worker_ID" Type="Int32" Nullable="false" />
+          <Property Name="TypeOfProcedure_ID" Type="Int32" Nullable="false" />
+          <Property Name="DeleteTime" Type="DateTime" />
+          <NavigationProperty Name="TypeOfProcedures" Relationship="Self.FK_WorkerTypeOfProcedures_1_0" FromRole="WorkerTypeOfProcedures" ToRole="TypeOfProcedures" />
+          <NavigationProperty Name="Workers" Relationship="Self.FK_WorkerTypeOfProcedures_0_0" FromRole="WorkerTypeOfProcedures" ToRole="Workers" />
+        </EntityType>
+        <EntityType Name="WorkerWorkingHours">
+          <Key>
+            <PropertyRef Name="Worker_ID" />
+            <PropertyRef Name="WorkingHour_ID" />
+          </Key>
+          <Property Name="Worker_ID" Type="Int32" Nullable="false" />
+          <Property Name="WorkingHour_ID" Type="Int32" Nullable="false" />
+          <Property Name="DeleteTime" Type="DateTime" />
+          <NavigationProperty Name="Workers" Relationship="Self.FK_WorkerWorkingHours_0_0" FromRole="WorkerWorkingHours" ToRole="Workers" />
+          <NavigationProperty Name="WorkingHours" Relationship="Self.FK_WorkerWorkingHours_1_0" FromRole="WorkerWorkingHours" ToRole="WorkingHours" />
+        </EntityType>
+        <EntityType Name="WorkingHours">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Worker_ID" Type="Int32" />
+          <Property Name="Cabinet_ID" Type="Int32" />
+          <Property Name="TimeStart" Type="DateTime" />
+          <Property Name="TimeEnd" Type="DateTime" />
+          <Property Name="DeleteTime" Type="DateTime" />
+          <NavigationProperty Name="Cabinets" Relationship="Self.FK_WorkingHours_0_0" FromRole="WorkingHours" ToRole="Cabinets" />
+          <NavigationProperty Name="Workers" Relationship="Self.FK_WorkingHours_1_0" FromRole="WorkingHours" ToRole="Workers" />
+          <NavigationProperty Name="WorkerWorkingHours" Relationship="Self.FK_WorkerWorkingHours_1_0" FromRole="WorkingHours" ToRole="WorkerWorkingHours" />
+        </EntityType>
+        <Association Name="FK_CabinetProcedures_0_0">
+          <End Role="Cabinets" Type="Self.Cabinets" Multiplicity="1" />
+          <End Role="CabinetProcedures" Type="Self.CabinetProcedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cabinets">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CabinetProcedures">
+              <PropertyRef Name="Cabinet_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CabinetProcedures_1_0">
+          <End Role="TypeOfProcedures" Type="Self.TypeOfProcedures" Multiplicity="1" />
+          <End Role="CabinetProcedures" Type="Self.CabinetProcedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeOfProcedures">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CabinetProcedures">
+              <PropertyRef Name="ProcedureType_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Procedures_2_0">
+          <End Role="Cabinets" Type="Self.Cabinets" Multiplicity="0..1" />
+          <End Role="Procedures" Type="Self.Procedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cabinets">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Procedures">
+              <PropertyRef Name="Cabinet_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Visits_0_0">
+          <End Role="Cabinets" Type="Self.Cabinets" Multiplicity="0..1" />
+          <End Role="Visits" Type="Self.Visits" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cabinets">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Visits">
+              <PropertyRef Name="Cabinet_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorkingHours_0_0">
+          <End Role="Cabinets" Type="Self.Cabinets" Multiplicity="0..1" />
+          <End Role="WorkingHours" Type="Self.WorkingHours" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cabinets">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WorkingHours">
+              <PropertyRef Name="Cabinet_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Diagnosises_0_0">
+          <End Role="Patients" Type="Self.Patients" Multiplicity="0..1" />
+          <End Role="Diagnosises" Type="Self.Diagnosises" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Patients">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Diagnosises">
+              <PropertyRef Name="Patient_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Diagnosises_1_0">
+          <End Role="Workers" Type="Self.Workers" Multiplicity="0..1" />
+          <End Role="Diagnosises" Type="Self.Diagnosises" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Diagnosises">
+              <PropertyRef Name="Worker_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DiagnosisesProcedures_1_0">
+          <End Role="Diagnosises" Type="Self.Diagnosises" Multiplicity="1" />
+          <End Role="DiagnosisesProcedures" Type="Self.DiagnosisesProcedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Diagnosises">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DiagnosisesProcedures">
+              <PropertyRef Name="Diagnosis_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TreatmentPlanDagnosises_1_0">
+          <End Role="Diagnosises" Type="Self.Diagnosises" Multiplicity="1" />
+          <End Role="TreatmentPlanDagnosises" Type="Self.TreatmentPlanDagnosises" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Diagnosises">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TreatmentPlanDagnosises">
+              <PropertyRef Name="Diagnosis_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DiagnosisesProcedures_0_0">
+          <End Role="Procedures" Type="Self.Procedures" Multiplicity="1" />
+          <End Role="DiagnosisesProcedures" Type="Self.DiagnosisesProcedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Procedures">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DiagnosisesProcedures">
+              <PropertyRef Name="Procedure_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FilesProcedures_0_0">
+          <End Role="Procedures" Type="Self.Procedures" Multiplicity="1" />
+          <End Role="FilesProcedures" Type="Self.FilesProcedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Procedures">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FilesProcedures">
+              <PropertyRef Name="Procedure_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KindOfProcedures_0_0">
+          <End Role="TypeOfProcedures" Type="Self.TypeOfProcedures" Multiplicity="0..1" />
+          <End Role="KindOfProcedures" Type="Self.KindOfProcedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeOfProcedures">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="KindOfProcedures">
+              <PropertyRef Name="TypeOfProcedure_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Procedures_1_0">
+          <End Role="KindOfProcedures" Type="Self.KindOfProcedures" Multiplicity="0..1" />
+          <End Role="Procedures" Type="Self.Procedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KindOfProcedures">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Procedures">
+              <PropertyRef Name="KindOfProcedure_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TypeOfProcedures_0_0">
+          <End Role="KindOfProcedures" Type="Self.KindOfProcedures" Multiplicity="0..1" />
+          <End Role="TypeOfProcedures" Type="Self.TypeOfProcedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KindOfProcedures">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TypeOfProcedures">
+              <PropertyRef Name="KindOfProcedure_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pays_0_0">
+          <End Role="Patients" Type="Self.Patients" Multiplicity="0..1" />
+          <End Role="Pays" Type="Self.Pays" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Patients">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Pays">
+              <PropertyRef Name="Patient_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Procedures_0_0">
+          <End Role="Patients" Type="Self.Patients" Multiplicity="0..1" />
+          <End Role="Procedures" Type="Self.Procedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Patients">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Procedures">
+              <PropertyRef Name="Patient_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TreatmentPlans_1_0">
+          <End Role="Patients" Type="Self.Patients" Multiplicity="0..1" />
+          <End Role="TreatmentPlans" Type="Self.TreatmentPlans" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Patients">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TreatmentPlans">
+              <PropertyRef Name="Patient_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Visits_2_0">
+          <End Role="Patients" Type="Self.Patients" Multiplicity="0..1" />
+          <End Role="Visits" Type="Self.Visits" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Patients">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Visits">
+              <PropertyRef Name="Patient_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pays_1_0">
+          <End Role="Workers" Type="Self.Workers" Multiplicity="0..1" />
+          <End Role="Pays" Type="Self.Pays" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Pays">
+              <PropertyRef Name="Worker_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pays_2_0">
+          <End Role="Procedures" Type="Self.Procedures" Multiplicity="0..1" />
+          <End Role="Pays" Type="Self.Pays" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Procedures">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Pays">
+              <PropertyRef Name="Procedure_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Procedures_3_0">
+          <End Role="Workers" Type="Self.Workers" Multiplicity="0..1" />
+          <End Role="Procedures" Type="Self.Procedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Procedures">
+              <PropertyRef Name="Worker_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Procedures_4_0">
+          <End Role="TypeOfProcedures" Type="Self.TypeOfProcedures" Multiplicity="0..1" />
+          <End Role="Procedures" Type="Self.Procedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeOfProcedures">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Procedures">
+              <PropertyRef Name="TypeOfProcedure_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TreatmentPlanProcedures_0_0">
+          <End Role="Procedures" Type="Self.Procedures" Multiplicity="1" />
+          <End Role="TreatmentPlanProcedures" Type="Self.TreatmentPlanProcedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Procedures">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TreatmentPlanProcedures">
+              <PropertyRef Name="Procedure_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VisitProcedures_0_0">
+          <End Role="Procedures" Type="Self.Procedures" Multiplicity="1" />
+          <End Role="VisitProcedures" Type="Self.VisitProcedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Procedures">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="VisitProcedures">
+              <PropertyRef Name="Procedure_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TreatmentPlanDagnosises_0_0">
+          <End Role="TreatmentPlans" Type="Self.TreatmentPlans" Multiplicity="1" />
+          <End Role="TreatmentPlanDagnosises" Type="Self.TreatmentPlanDagnosises" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TreatmentPlans">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TreatmentPlanDagnosises">
+              <PropertyRef Name="TreatmentPlan_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TreatmentPlanProcedures_1_0">
+          <End Role="TreatmentPlans" Type="Self.TreatmentPlans" Multiplicity="1" />
+          <End Role="TreatmentPlanProcedures" Type="Self.TreatmentPlanProcedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TreatmentPlans">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TreatmentPlanProcedures">
+              <PropertyRef Name="TreatmentPlan_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TreatmentPlans_0_0">
+          <End Role="Workers" Type="Self.Workers" Multiplicity="0..1" />
+          <End Role="TreatmentPlans" Type="Self.TreatmentPlans" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TreatmentPlans">
+              <PropertyRef Name="Worker_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorkerProcedures_1_0">
+          <End Role="TypeOfProcedures" Type="Self.TypeOfProcedures" Multiplicity="1" />
+          <End Role="WorkerProcedures" Type="Self.WorkerProcedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeOfProcedures">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WorkerProcedures">
+              <PropertyRef Name="Procedure_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorkerTypeOfProcedures_1_0">
+          <End Role="TypeOfProcedures" Type="Self.TypeOfProcedures" Multiplicity="1" />
+          <End Role="WorkerTypeOfProcedures" Type="Self.WorkerTypeOfProcedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeOfProcedures">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WorkerTypeOfProcedures">
+              <PropertyRef Name="TypeOfProcedure_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VisitProcedures_1_0">
+          <End Role="Visits" Type="Self.Visits" Multiplicity="1" />
+          <End Role="VisitProcedures" Type="Self.VisitProcedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Visits">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="VisitProcedures">
+              <PropertyRef Name="Visit_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Visits_1_0">
+          <End Role="Workers" Type="Self.Workers" Multiplicity="0..1" />
+          <End Role="Visits" Type="Self.Visits" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Visits">
+              <PropertyRef Name="Worker_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VisitWorkers_0_0">
+          <End Role="Visits" Type="Self.Visits" Multiplicity="1" />
+          <End Role="VisitWorkers" Type="Self.VisitWorkers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Visits">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="VisitWorkers">
+              <PropertyRef Name="Visit_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VisitWorkers_1_0">
+          <End Role="Workers" Type="Self.Workers" Multiplicity="1" />
+          <End Role="VisitWorkers" Type="Self.VisitWorkers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="VisitWorkers">
+              <PropertyRef Name="Worker_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorkerProcedures_0_0">
+          <End Role="Workers" Type="Self.Workers" Multiplicity="1" />
+          <End Role="WorkerProcedures" Type="Self.WorkerProcedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WorkerProcedures">
+              <PropertyRef Name="Worker_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorkerTypeOfProcedures_0_0">
+          <End Role="Workers" Type="Self.Workers" Multiplicity="1" />
+          <End Role="WorkerTypeOfProcedures" Type="Self.WorkerTypeOfProcedures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WorkerTypeOfProcedures">
+              <PropertyRef Name="Worker_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorkerWorkingHours_0_0">
+          <End Role="Workers" Type="Self.Workers" Multiplicity="1" />
+          <End Role="WorkerWorkingHours" Type="Self.WorkerWorkingHours" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WorkerWorkingHours">
+              <PropertyRef Name="Worker_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorkingHours_1_0">
+          <End Role="Workers" Type="Self.Workers" Multiplicity="0..1" />
+          <End Role="WorkingHours" Type="Self.WorkingHours" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WorkingHours">
+              <PropertyRef Name="Worker_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorkerWorkingHours_1_0">
+          <End Role="WorkingHours" Type="Self.WorkingHours" Multiplicity="1" />
+          <End Role="WorkerWorkingHours" Type="Self.WorkerWorkingHours" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WorkingHours">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WorkerWorkingHours">
+              <PropertyRef Name="WorkingHour_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ClinicEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CabinetProcedures" EntityType="Self.CabinetProcedures" />
+          <EntitySet Name="Cabinets" EntityType="Self.Cabinets" />
+          <EntitySet Name="Diagnosises" EntityType="Self.Diagnosises" />
+          <EntitySet Name="DiagnosisesProcedures" EntityType="Self.DiagnosisesProcedures" />
+          <EntitySet Name="FilesProcedures" EntityType="Self.FilesProcedures" />
+          <EntitySet Name="KindOfProcedures" EntityType="Self.KindOfProcedures" />
+          <EntitySet Name="Patients" EntityType="Self.Patients" />
+          <EntitySet Name="Pays" EntityType="Self.Pays" />
+          <EntitySet Name="Procedures" EntityType="Self.Procedures" />
+          <EntitySet Name="TreatmentPlanDagnosises" EntityType="Self.TreatmentPlanDagnosises" />
+          <EntitySet Name="TreatmentPlanProcedures" EntityType="Self.TreatmentPlanProcedures" />
+          <EntitySet Name="TreatmentPlans" EntityType="Self.TreatmentPlans" />
+          <EntitySet Name="TypeOfProcedures" EntityType="Self.TypeOfProcedures" />
+          <EntitySet Name="VisitProcedures" EntityType="Self.VisitProcedures" />
+          <EntitySet Name="Visits" EntityType="Self.Visits" />
+          <EntitySet Name="VisitWorkers" EntityType="Self.VisitWorkers" />
+          <EntitySet Name="WorkerProcedures" EntityType="Self.WorkerProcedures" />
+          <EntitySet Name="Workers" EntityType="Self.Workers" />
+          <EntitySet Name="WorkerTypeOfProcedures" EntityType="Self.WorkerTypeOfProcedures" />
+          <EntitySet Name="WorkerWorkingHours" EntityType="Self.WorkerWorkingHours" />
+          <EntitySet Name="WorkingHours" EntityType="Self.WorkingHours" />
+          <AssociationSet Name="FK_CabinetProcedures_0_0" Association="Self.FK_CabinetProcedures_0_0">
+            <End Role="Cabinets" EntitySet="Cabinets" />
+            <End Role="CabinetProcedures" EntitySet="CabinetProcedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CabinetProcedures_1_0" Association="Self.FK_CabinetProcedures_1_0">
+            <End Role="TypeOfProcedures" EntitySet="TypeOfProcedures" />
+            <End Role="CabinetProcedures" EntitySet="CabinetProcedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Procedures_2_0" Association="Self.FK_Procedures_2_0">
+            <End Role="Cabinets" EntitySet="Cabinets" />
+            <End Role="Procedures" EntitySet="Procedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Visits_0_0" Association="Self.FK_Visits_0_0">
+            <End Role="Cabinets" EntitySet="Cabinets" />
+            <End Role="Visits" EntitySet="Visits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorkingHours_0_0" Association="Self.FK_WorkingHours_0_0">
+            <End Role="Cabinets" EntitySet="Cabinets" />
+            <End Role="WorkingHours" EntitySet="WorkingHours" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Diagnosises_0_0" Association="Self.FK_Diagnosises_0_0">
+            <End Role="Patients" EntitySet="Patients" />
+            <End Role="Diagnosises" EntitySet="Diagnosises" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Diagnosises_1_0" Association="Self.FK_Diagnosises_1_0">
+            <End Role="Workers" EntitySet="Workers" />
+            <End Role="Diagnosises" EntitySet="Diagnosises" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DiagnosisesProcedures_1_0" Association="Self.FK_DiagnosisesProcedures_1_0">
+            <End Role="Diagnosises" EntitySet="Diagnosises" />
+            <End Role="DiagnosisesProcedures" EntitySet="DiagnosisesProcedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TreatmentPlanDagnosises_1_0" Association="Self.FK_TreatmentPlanDagnosises_1_0">
+            <End Role="Diagnosises" EntitySet="Diagnosises" />
+            <End Role="TreatmentPlanDagnosises" EntitySet="TreatmentPlanDagnosises" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DiagnosisesProcedures_0_0" Association="Self.FK_DiagnosisesProcedures_0_0">
+            <End Role="Procedures" EntitySet="Procedures" />
+            <End Role="DiagnosisesProcedures" EntitySet="DiagnosisesProcedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FilesProcedures_0_0" Association="Self.FK_FilesProcedures_0_0">
+            <End Role="Procedures" EntitySet="Procedures" />
+            <End Role="FilesProcedures" EntitySet="FilesProcedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KindOfProcedures_0_0" Association="Self.FK_KindOfProcedures_0_0">
+            <End Role="TypeOfProcedures" EntitySet="TypeOfProcedures" />
+            <End Role="KindOfProcedures" EntitySet="KindOfProcedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Procedures_1_0" Association="Self.FK_Procedures_1_0">
+            <End Role="KindOfProcedures" EntitySet="KindOfProcedures" />
+            <End Role="Procedures" EntitySet="Procedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TypeOfProcedures_0_0" Association="Self.FK_TypeOfProcedures_0_0">
+            <End Role="KindOfProcedures" EntitySet="KindOfProcedures" />
+            <End Role="TypeOfProcedures" EntitySet="TypeOfProcedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pays_0_0" Association="Self.FK_Pays_0_0">
+            <End Role="Patients" EntitySet="Patients" />
+            <End Role="Pays" EntitySet="Pays" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Procedures_0_0" Association="Self.FK_Procedures_0_0">
+            <End Role="Patients" EntitySet="Patients" />
+            <End Role="Procedures" EntitySet="Procedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TreatmentPlans_1_0" Association="Self.FK_TreatmentPlans_1_0">
+            <End Role="Patients" EntitySet="Patients" />
+            <End Role="TreatmentPlans" EntitySet="TreatmentPlans" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Visits_2_0" Association="Self.FK_Visits_2_0">
+            <End Role="Patients" EntitySet="Patients" />
+            <End Role="Visits" EntitySet="Visits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pays_1_0" Association="Self.FK_Pays_1_0">
+            <End Role="Workers" EntitySet="Workers" />
+            <End Role="Pays" EntitySet="Pays" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pays_2_0" Association="Self.FK_Pays_2_0">
+            <End Role="Procedures" EntitySet="Procedures" />
+            <End Role="Pays" EntitySet="Pays" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Procedures_3_0" Association="Self.FK_Procedures_3_0">
+            <End Role="Workers" EntitySet="Workers" />
+            <End Role="Procedures" EntitySet="Procedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Procedures_4_0" Association="Self.FK_Procedures_4_0">
+            <End Role="TypeOfProcedures" EntitySet="TypeOfProcedures" />
+            <End Role="Procedures" EntitySet="Procedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TreatmentPlanProcedures_0_0" Association="Self.FK_TreatmentPlanProcedures_0_0">
+            <End Role="Procedures" EntitySet="Procedures" />
+            <End Role="TreatmentPlanProcedures" EntitySet="TreatmentPlanProcedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VisitProcedures_0_0" Association="Self.FK_VisitProcedures_0_0">
+            <End Role="Procedures" EntitySet="Procedures" />
+            <End Role="VisitProcedures" EntitySet="VisitProcedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TreatmentPlanDagnosises_0_0" Association="Self.FK_TreatmentPlanDagnosises_0_0">
+            <End Role="TreatmentPlans" EntitySet="TreatmentPlans" />
+            <End Role="TreatmentPlanDagnosises" EntitySet="TreatmentPlanDagnosises" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TreatmentPlanProcedures_1_0" Association="Self.FK_TreatmentPlanProcedures_1_0">
+            <End Role="TreatmentPlans" EntitySet="TreatmentPlans" />
+            <End Role="TreatmentPlanProcedures" EntitySet="TreatmentPlanProcedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TreatmentPlans_0_0" Association="Self.FK_TreatmentPlans_0_0">
+            <End Role="Workers" EntitySet="Workers" />
+            <End Role="TreatmentPlans" EntitySet="TreatmentPlans" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorkerProcedures_1_0" Association="Self.FK_WorkerProcedures_1_0">
+            <End Role="TypeOfProcedures" EntitySet="TypeOfProcedures" />
+            <End Role="WorkerProcedures" EntitySet="WorkerProcedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorkerTypeOfProcedures_1_0" Association="Self.FK_WorkerTypeOfProcedures_1_0">
+            <End Role="TypeOfProcedures" EntitySet="TypeOfProcedures" />
+            <End Role="WorkerTypeOfProcedures" EntitySet="WorkerTypeOfProcedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VisitProcedures_1_0" Association="Self.FK_VisitProcedures_1_0">
+            <End Role="Visits" EntitySet="Visits" />
+            <End Role="VisitProcedures" EntitySet="VisitProcedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Visits_1_0" Association="Self.FK_Visits_1_0">
+            <End Role="Workers" EntitySet="Workers" />
+            <End Role="Visits" EntitySet="Visits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VisitWorkers_0_0" Association="Self.FK_VisitWorkers_0_0">
+            <End Role="Visits" EntitySet="Visits" />
+            <End Role="VisitWorkers" EntitySet="VisitWorkers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VisitWorkers_1_0" Association="Self.FK_VisitWorkers_1_0">
+            <End Role="Workers" EntitySet="Workers" />
+            <End Role="VisitWorkers" EntitySet="VisitWorkers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorkerProcedures_0_0" Association="Self.FK_WorkerProcedures_0_0">
+            <End Role="Workers" EntitySet="Workers" />
+            <End Role="WorkerProcedures" EntitySet="WorkerProcedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorkerTypeOfProcedures_0_0" Association="Self.FK_WorkerTypeOfProcedures_0_0">
+            <End Role="Workers" EntitySet="Workers" />
+            <End Role="WorkerTypeOfProcedures" EntitySet="WorkerTypeOfProcedures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorkerWorkingHours_0_0" Association="Self.FK_WorkerWorkingHours_0_0">
+            <End Role="Workers" EntitySet="Workers" />
+            <End Role="WorkerWorkingHours" EntitySet="WorkerWorkingHours" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorkingHours_1_0" Association="Self.FK_WorkingHours_1_0">
+            <End Role="Workers" EntitySet="Workers" />
+            <End Role="WorkingHours" EntitySet="WorkingHours" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorkerWorkingHours_1_0" Association="Self.FK_WorkerWorkingHours_1_0">
+            <End Role="WorkingHours" EntitySet="WorkingHours" />
+            <End Role="WorkerWorkingHours" EntitySet="WorkerWorkingHours" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище ClinicModelContainer" CdmEntityContainer="ClinicEntities1">
+          <EntitySetMapping Name="CabinetProcedures">
+            <EntityTypeMapping TypeName="ClinicModel.CabinetProcedures">
+              <MappingFragment StoreEntitySet="CabinetProcedures">
+                <ScalarProperty Name="Cabinet_ID" ColumnName="Cabinet_ID" />
+                <ScalarProperty Name="ProcedureType_ID" ColumnName="ProcedureType_ID" />
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cabinets">
+            <EntityTypeMapping TypeName="ClinicModel.Cabinets">
+              <MappingFragment StoreEntitySet="Cabinets">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Diagnosises">
+            <EntityTypeMapping TypeName="ClinicModel.Diagnosises">
+              <MappingFragment StoreEntitySet="Diagnosises">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Patient_ID" ColumnName="Patient_ID" />
+                <ScalarProperty Name="Worker_ID" ColumnName="Worker_ID" />
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DiagnosisesProcedures">
+            <EntityTypeMapping TypeName="ClinicModel.DiagnosisesProcedures">
+              <MappingFragment StoreEntitySet="DiagnosisesProcedures">
+                <ScalarProperty Name="Diagnosis_ID" ColumnName="Diagnosis_ID" />
+                <ScalarProperty Name="Procedure_ID" ColumnName="Procedure_ID" />
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FilesProcedures">
+            <EntityTypeMapping TypeName="ClinicModel.FilesProcedures">
+              <MappingFragment StoreEntitySet="FilesProcedures">
+                <ScalarProperty Name="Procedure_ID" ColumnName="Procedure_ID" />
+                <ScalarProperty Name="Path" ColumnName="Path" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KindOfProcedures">
+            <EntityTypeMapping TypeName="ClinicModel.KindOfProcedures">
+              <MappingFragment StoreEntitySet="KindOfProcedures">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="TypeOfProcedure_ID" ColumnName="TypeOfProcedure_ID" />
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Patients">
+            <EntityTypeMapping TypeName="ClinicModel.Patients">
+              <MappingFragment StoreEntitySet="Patients">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="TelephoneNumber" ColumnName="TelephoneNumber" />
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pays">
+            <EntityTypeMapping TypeName="ClinicModel.Pays">
+              <MappingFragment StoreEntitySet="Pays">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Patient_ID" ColumnName="Patient_ID" />
+                <ScalarProperty Name="Procedure_ID" ColumnName="Procedure_ID" />
+                <ScalarProperty Name="Worker_ID" ColumnName="Worker_ID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Procedures">
+            <EntityTypeMapping TypeName="ClinicModel.Procedures">
+              <MappingFragment StoreEntitySet="Procedures">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="DateFact" ColumnName="DateFact" />
+                <ScalarProperty Name="DateEventStart" ColumnName="DateEventStart" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="KindOfProcedure_ID" ColumnName="KindOfProcedure_ID" />
+                <ScalarProperty Name="TypeOfProcedure_ID" ColumnName="TypeOfProcedure_ID" />
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+                <ScalarProperty Name="Patient_ID" ColumnName="Patient_ID" />
+                <ScalarProperty Name="Worker_ID" ColumnName="Worker_ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Cabinet_ID" ColumnName="Cabinet_ID" />
+                <ScalarProperty Name="IsOurs" ColumnName="IsOurs" />
+                <ScalarProperty Name="DateEventEnd" ColumnName="DateEventEnd" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TreatmentPlanDagnosises">
+            <EntityTypeMapping TypeName="ClinicModel.TreatmentPlanDagnosises">
+              <MappingFragment StoreEntitySet="TreatmentPlanDagnosises">
+                <ScalarProperty Name="TreatmentPlan_ID" ColumnName="TreatmentPlan_ID" />
+                <ScalarProperty Name="Diagnosis_ID" ColumnName="Diagnosis_ID" />
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TreatmentPlanProcedures">
+            <EntityTypeMapping TypeName="ClinicModel.TreatmentPlanProcedures">
+              <MappingFragment StoreEntitySet="TreatmentPlanProcedures">
+                <ScalarProperty Name="TreatmentPlan_ID" ColumnName="TreatmentPlan_ID" />
+                <ScalarProperty Name="Procedure_ID" ColumnName="Procedure_ID" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TreatmentPlans">
+            <EntityTypeMapping TypeName="ClinicModel.TreatmentPlans">
+              <MappingFragment StoreEntitySet="TreatmentPlans">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Patient_ID" ColumnName="Patient_ID" />
+                <ScalarProperty Name="Worker_ID" ColumnName="Worker_ID" />
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TypeOfProcedures">
+            <EntityTypeMapping TypeName="ClinicModel.TypeOfProcedures">
+              <MappingFragment StoreEntitySet="TypeOfProcedures">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="KindOfProcedure_ID" ColumnName="KindOfProcedure_ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VisitProcedures">
+            <EntityTypeMapping TypeName="ClinicModel.VisitProcedures">
+              <MappingFragment StoreEntitySet="VisitProcedures">
+                <ScalarProperty Name="Visit_ID" ColumnName="Visit_ID" />
+                <ScalarProperty Name="Procedure_ID" ColumnName="Procedure_ID" />
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Visits">
+            <EntityTypeMapping TypeName="ClinicModel.Visits">
+              <MappingFragment StoreEntitySet="Visits">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="DateStart" ColumnName="DateStart" />
+                <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Cabinet_ID" ColumnName="Cabinet_ID" />
+                <ScalarProperty Name="Patient_ID" ColumnName="Patient_ID" />
+                <ScalarProperty Name="Result" ColumnName="Result" />
+                <ScalarProperty Name="Worker_ID" ColumnName="Worker_ID" />
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VisitWorkers">
+            <EntityTypeMapping TypeName="ClinicModel.VisitWorkers">
+              <MappingFragment StoreEntitySet="VisitWorkers">
+                <ScalarProperty Name="Visit_ID" ColumnName="Visit_ID" />
+                <ScalarProperty Name="Worker_ID" ColumnName="Worker_ID" />
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WorkerProcedures">
+            <EntityTypeMapping TypeName="ClinicModel.WorkerProcedures">
+              <MappingFragment StoreEntitySet="WorkerProcedures">
+                <ScalarProperty Name="Worker_ID" ColumnName="Worker_ID" />
+                <ScalarProperty Name="Procedure_ID" ColumnName="Procedure_ID" />
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Workers">
+            <EntityTypeMapping TypeName="ClinicModel.Workers">
+              <MappingFragment StoreEntitySet="Workers">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TelephoneNumber" ColumnName="TelephoneNumber" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Specialization" ColumnName="Specialization" />
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WorkerTypeOfProcedures">
+            <EntityTypeMapping TypeName="ClinicModel.WorkerTypeOfProcedures">
+              <MappingFragment StoreEntitySet="WorkerTypeOfProcedures">
+                <ScalarProperty Name="Worker_ID" ColumnName="Worker_ID" />
+                <ScalarProperty Name="TypeOfProcedure_ID" ColumnName="TypeOfProcedure_ID" />
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WorkerWorkingHours">
+            <EntityTypeMapping TypeName="ClinicModel.WorkerWorkingHours">
+              <MappingFragment StoreEntitySet="WorkerWorkingHours">
+                <ScalarProperty Name="Worker_ID" ColumnName="Worker_ID" />
+                <ScalarProperty Name="WorkingHour_ID" ColumnName="WorkingHour_ID" />
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WorkingHours">
+            <EntityTypeMapping TypeName="ClinicModel.WorkingHours">
+              <MappingFragment StoreEntitySet="WorkingHours">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Worker_ID" ColumnName="Worker_ID" />
+                <ScalarProperty Name="Cabinet_ID" ColumnName="Cabinet_ID" />
+                <ScalarProperty Name="TimeStart" ColumnName="TimeStart" />
+                <ScalarProperty Name="TimeEnd" ColumnName="TimeEnd" />
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

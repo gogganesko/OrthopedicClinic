@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5c237e6ec4a34609b75b25fb7043a83b" Name="Diagram1">
+        <EntityTypeShape EntityType="ClinicModel.CabinetProcedures" Width="1.5" PointX="6" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicModel.Cabinets" Width="1.5" PointX="3.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicModel.Diagnosises" Width="1.5" PointX="3" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicModel.DiagnosisesProcedures" Width="1.5" PointX="11.25" PointY="21.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicModel.FilesProcedures" Width="1.5" PointX="8.25" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicModel.KindOfProcedures" Width="1.5" PointX="3.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicModel.Patients" Width="1.5" PointX="3.75" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicModel.Pays" Width="1.5" PointX="6" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicModel.Procedures" Width="1.5" PointX="6" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicModel.TreatmentPlanDagnosises" Width="1.5" PointX="11.25" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicModel.TreatmentPlanProcedures" Width="1.5" PointX="11.25" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicModel.TreatmentPlans" Width="1.5" PointX="3" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicModel.TypeOfProcedures" Width="1.5" PointX="1.5" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicModel.VisitProcedures" Width="1.5" PointX="11.25" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicModel.Visits" Width="1.5" PointX="6" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicModel.VisitWorkers" Width="1.5" PointX="11.25" PointY="24.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicModel.WorkerProcedures" Width="1.5" PointX="3" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicModel.Workers" Width="1.5" PointX="0.75" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicModel.WorkerTypeOfProcedures" Width="1.5" PointX="9" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicModel.WorkerWorkingHours" Width="1.5" PointX="9" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicModel.WorkingHours" Width="1.5" PointX="9" PointY="23.25" IsExpanded="true" />
+        <AssociationConnector Association="ClinicModel.FK_CabinetProcedures_0_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_CabinetProcedures_1_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_Procedures_2_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_Visits_0_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_WorkingHours_0_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_Diagnosises_0_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_Diagnosises_1_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_DiagnosisesProcedures_1_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_TreatmentPlanDagnosises_1_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_DiagnosisesProcedures_0_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_FilesProcedures_0_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_KindOfProcedures_0_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_Procedures_1_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_TypeOfProcedures_0_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_Pays_0_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_Procedures_0_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_TreatmentPlans_1_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_Visits_2_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_Pays_1_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_Pays_2_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_Procedures_3_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_Procedures_4_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_TreatmentPlanProcedures_0_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_VisitProcedures_0_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_TreatmentPlanDagnosises_0_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_TreatmentPlanProcedures_1_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_TreatmentPlans_0_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_WorkerProcedures_1_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_WorkerTypeOfProcedures_1_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_VisitProcedures_1_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_Visits_1_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_VisitWorkers_0_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_VisitWorkers_1_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_WorkerProcedures_0_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_WorkerTypeOfProcedures_0_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_WorkerWorkingHours_0_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_WorkingHours_1_0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_WorkerWorkingHours_1_0" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

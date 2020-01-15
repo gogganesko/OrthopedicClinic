@@ -1,0 +1,202 @@
+c:\users\jerrar\documents\visual studio 2015\Projects\OrthopedicClinic\OrthopedicClinic\bin\Debug\OrthopedicClinic.exe.config
+c:\users\jerrar\documents\visual studio 2015\Projects\OrthopedicClinic\OrthopedicClinic\bin\Debug\OrthopedicClinic.exe
+c:\users\jerrar\documents\visual studio 2015\Projects\OrthopedicClinic\OrthopedicClinic\bin\Debug\OrthopedicClinic.pdb
+c:\users\jerrar\documents\visual studio 2015\Projects\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.csprojResolveAssemblyReference.cache
+c:\users\jerrar\documents\visual studio 2015\Projects\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.Form1.resources
+c:\users\jerrar\documents\visual studio 2015\Projects\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.Properties.Resources.resources
+c:\users\jerrar\documents\visual studio 2015\Projects\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.WorkerCard.resources
+c:\users\jerrar\documents\visual studio 2015\Projects\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.WorkerEdit.resources
+c:\users\jerrar\documents\visual studio 2015\Projects\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.csproj.GenerateResource.Cache
+c:\users\jerrar\documents\visual studio 2015\Projects\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.exe
+c:\users\jerrar\documents\visual studio 2015\Projects\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.pdb
+D:\OrthopedicClinic\OrthopedicClinic\bin\Debug\OrthopedicClinic.exe.config
+D:\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.exe
+D:\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.pdb
+E:\OrthopedicClinic\OrthopedicClinic\bin\Debug\OrthopedicClinic.exe.config
+E:\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.exe
+E:\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.pdb
+\\itcorp.tech\Homes\Student\01330\35\Desktop\OrthopedicClinic\OrthopedicClinic\bin\Debug\OrthopedicClinic.exe.config
+\\itcorp.tech\Homes\Student\01330\35\Desktop\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.exe
+\\itcorp.tech\Homes\Student\01330\35\Desktop\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.pdb
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\bin\Debug\OrthopedicClinic.exe.config
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.exe
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.pdb
+F:\Прогонье\OrthopedicClinic\OrthopedicClinic\bin\Debug\OrthopedicClinic.exe.config
+F:\Прогонье\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.exe
+F:\Прогонье\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.pdb
+D:\Прогонье\OrthopedicClinic\OrthopedicClinic\bin\Debug\OrthopedicClinic.exe.config
+D:\Прогонье\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.exe
+D:\Прогонье\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.pdb
+E:\Прогонье\OrthopedicClinic\OrthopedicClinic\bin\Debug\OrthopedicClinic.exe.config
+E:\Прогонье\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.exe
+E:\Прогонье\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.pdb
+F:\последнее\OrthopedicClinic\OrthopedicClinic\bin\Debug\OrthopedicClinic.exe.config
+F:\последнее\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.exe
+F:\последнее\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.pdb
+D:\последнее\OrthopedicClinic\OrthopedicClinic\bin\Debug\OrthopedicClinic.exe.config
+D:\последнее\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.exe
+D:\последнее\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.pdb
+D:\DIAGRAMMI ADA 14.11.2018\последнее\OrthopedicClinic\OrthopedicClinic\bin\Debug\OrthopedicClinic.exe.config
+D:\DIAGRAMMI ADA 14.11.2018\последнее\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.exe
+D:\DIAGRAMMI ADA 14.11.2018\последнее\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.pdb
+F:\DIAGRAMMI ADA 14.11.2018\последнее\OrthopedicClinic\OrthopedicClinic\bin\Debug\OrthopedicClinic.exe.config
+F:\DIAGRAMMI ADA 14.11.2018\последнее\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.exe
+F:\DIAGRAMMI ADA 14.11.2018\последнее\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.pdb
+E:\DIAGRAMMI ADA 14.11.2018\последнее\OrthopedicClinic\OrthopedicClinic\bin\Debug\OrthopedicClinic.exe.config
+E:\DIAGRAMMI ADA 14.11.2018\последнее\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.exe
+E:\DIAGRAMMI ADA 14.11.2018\последнее\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.pdb
+F:\DIAGRAMMI ADA 17.11.2018\последнее\OrthopedicClinic\OrthopedicClinic\bin\Debug\OrthopedicClinic.exe.config
+F:\DIAGRAMMI ADA 17.11.2018\последнее\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.exe
+F:\DIAGRAMMI ADA 17.11.2018\последнее\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.pdb
+C:\Users\User\Desktop\Orho\OrthopedicClinic\OrthopedicClinic\bin\Debug\OrthopedicClinic.exe.config
+C:\Users\User\Desktop\Orho\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.exe
+C:\Users\User\Desktop\Orho\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.pdb
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\bin\Debug\OrthopedicClinic.exe
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\bin\Debug\OrthopedicClinic.pdb
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\bin\Debug\EntityFramework.dll
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\bin\Debug\System.Data.SQLite.dll
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\bin\Debug\EntityFramework.xml
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\bin\Debug\System.Data.SQLite.xml
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.Authoriz.resources
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.Bill.resources
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.CabinetCard.resources
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.CabinetEdit.resources
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.DiagnosisCard.resources
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.DiagnosisEdit.resources
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.PatientCard.resources
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.Form1.resources
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.PatientEdit.resources
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.ProcedureCard.resources
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.ProcedureEdit.resources
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.Properties.Resources.resources
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.Repeat.resources
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.TreatmentPlanCard.resources
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.TreatmentPlanEdit.resources
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.TypeOfProcedureCard.resources
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.TypeOfProcedureEdit.resources
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.VisitCard.resources
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.VisitEdit.resources
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.WorkerCard.resources
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.WorkerEdit.resources
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.WorkingHourCard.resources
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.WorkingHourEdit.resources
+C:\Users\User\Desktop\OrthopedicClinic\OrthopedicClinic\obj\Debug\OrthopedicClinic.csproj.GenerateResource.Cache
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\bin\Debug\OrthopedicClinic.exe.config
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\obj\Debug\OrthopedicClinic.exe
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\obj\Debug\OrthopedicClinic.pdb
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\bin\Debug\OrthopedicClinic.exe
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\bin\Debug\OrthopedicClinic.pdb
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\bin\Debug\EntityFramework.dll
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\bin\Debug\System.Data.SQLite.dll
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\bin\Debug\EntityFramework.xml
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\bin\Debug\System.Data.SQLite.xml
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\obj\Debug\OrthopedicClinic.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\obj\Debug\OrthopedicClinic.Authoriz.resources
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\obj\Debug\OrthopedicClinic.Bill.resources
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\obj\Debug\OrthopedicClinic.CabinetCard.resources
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\obj\Debug\OrthopedicClinic.CabinetEdit.resources
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\obj\Debug\OrthopedicClinic.DiagnosisCard.resources
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\obj\Debug\OrthopedicClinic.DiagnosisEdit.resources
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\obj\Debug\OrthopedicClinic.PatientCard.resources
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\obj\Debug\OrthopedicClinic.Form1.resources
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\obj\Debug\OrthopedicClinic.PatientEdit.resources
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\obj\Debug\OrthopedicClinic.ProcedureCard.resources
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\obj\Debug\OrthopedicClinic.ProcedureEdit.resources
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\obj\Debug\OrthopedicClinic.Properties.Resources.resources
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\obj\Debug\OrthopedicClinic.Repeat.resources
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\obj\Debug\OrthopedicClinic.TreatmentPlanCard.resources
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\obj\Debug\OrthopedicClinic.TreatmentPlanEdit.resources
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\obj\Debug\OrthopedicClinic.TypeOfProcedureCard.resources
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\obj\Debug\OrthopedicClinic.TypeOfProcedureEdit.resources
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\obj\Debug\OrthopedicClinic.VisitCard.resources
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\obj\Debug\OrthopedicClinic.VisitEdit.resources
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\obj\Debug\OrthopedicClinic.WorkerCard.resources
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\obj\Debug\OrthopedicClinic.WorkerEdit.resources
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\obj\Debug\OrthopedicClinic.WorkingHourCard.resources
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\obj\Debug\OrthopedicClinic.WorkingHourEdit.resources
+C:\Users\User\Desktop\OrthopedicClinic — копия\OrthopedicClinic\obj\Debug\OrthopedicClinic.csproj.GenerateResource.Cache
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\bin\Debug\OrthopedicClinic.exe.config
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.exe
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.pdb
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\bin\Debug\OrthopedicClinic.exe
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\bin\Debug\OrthopedicClinic.pdb
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\bin\Debug\EntityFramework.dll
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\bin\Debug\System.Data.SQLite.dll
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\bin\Debug\EntityFramework.xml
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\bin\Debug\System.Data.SQLite.xml
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.Authoriz.resources
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.Bill.resources
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.CabinetCard.resources
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.CabinetEdit.resources
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.DiagnosisCard.resources
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.DiagnosisEdit.resources
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.PatientCard.resources
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.Form1.resources
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.PatientEdit.resources
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.ProcedureCard.resources
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.ProcedureEdit.resources
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.Properties.Resources.resources
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.Repeat.resources
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.TreatmentPlanCard.resources
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.TreatmentPlanEdit.resources
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.TypeOfProcedureCard.resources
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.TypeOfProcedureEdit.resources
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.VisitCard.resources
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.VisitEdit.resources
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.WorkerCard.resources
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.WorkerEdit.resources
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.WorkingHourCard.resources
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.WorkingHourEdit.resources
+C:\Users\User\Desktop\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.csproj.GenerateResource.Cache
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\bin\Debug\OrthopedicClinic.exe.config
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.exe
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.pdb
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\bin\Debug\OrthopedicClinic.exe
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\bin\Debug\OrthopedicClinic.pdb
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\bin\Debug\EntityFramework.dll
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\bin\Debug\System.Data.SQLite.dll
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\bin\Debug\EntityFramework.xml
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\bin\Debug\System.Data.SQLite.xml
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.csprojResolveAssemblyReference.cache
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.Authoriz.resources
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.Bill.resources
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.CabinetCard.resources
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.CabinetEdit.resources
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.DiagnosisCard.resources
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.DiagnosisEdit.resources
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.PatientCard.resources
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.Form1.resources
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.PatientEdit.resources
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.ProcedureCard.resources
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.ProcedureEdit.resources
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.Properties.Resources.resources
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.Repeat.resources
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.TreatmentPlanCard.resources
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.TreatmentPlanEdit.resources
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.TypeOfProcedureCard.resources
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.TypeOfProcedureEdit.resources
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.VisitCard.resources
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.VisitEdit.resources
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.WorkerCard.resources
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.WorkerEdit.resources
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.WorkingHourCard.resources
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.WorkingHourEdit.resources
+C:\Users\Юрий\Desktop\Юрков Г.Ю. БИ-171\OrthopedicClinic — основа\OrthopedicClinic\obj\Debug\OrthopedicClinic.csproj.GenerateResource.Cache
